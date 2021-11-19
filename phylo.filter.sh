@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --ntasks=20
 #SBATCH --mem=32G
-#SBATCH --time=04:00:00
+#SBATCH --time=08:00:00
 #SBATCH -p fast, abild
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ibishara@coh.org
@@ -29,7 +29,7 @@ export PATH="${PATH}:/home/ibishara/miniconda3/envs/betsy/lib64/python2.7/site-p
 echo $(python --version)
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_30_15_10 \
@@ -43,7 +43,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
 
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_20_15_10 \
@@ -56,7 +56,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_15_15_10 \
@@ -69,7 +69,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_30_10_10 \
@@ -82,7 +82,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_20_10_10 \
@@ -95,7 +95,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_20_5_5 \
@@ -109,7 +109,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
 
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_10_5_5 \
@@ -123,7 +123,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
 
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_15_5_5 \
@@ -136,7 +136,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_15_10_10 \
@@ -149,7 +149,7 @@ betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 2
     --run
 
 betsy_run.py --network_plot $sample/parameter_screen/${sample}.pdf --num_cores 20 --receipt $sample/parameter_screen/${sample}.txt \
-    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt \
+    --input PhyloSimpleVariantMatrix --input_file $sample/${sample}_clean.svm.txt.gz \
     --dattr PhyloSimpleVariantMatrix.is_pseudobulk=yes \
     --input PhyloMetadataFile --input_file $sample/${sample}_full_phylo_meta.txt \
     --output PhyloFilterAnalysis --output_file $sample/parameter_screen/${sample}_30_5_5 \
